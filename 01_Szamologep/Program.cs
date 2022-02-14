@@ -8,8 +8,9 @@ namespace _01_Szamologep
         //FELADAT: A projektkönyvtárban található pdf állomány leírja
         static void Main(string[] args)
         {
-            double a = 2;
-            double b = 3;
+
+            double a = 0;
+            double b = 0;
             int menu = 0;
             string sor;
             List<string> elozmeny = new List<string>();
@@ -40,7 +41,7 @@ namespace _01_Szamologep
                             }
                             else
                             {
-                                sor = String.Format("A = {0}\tB = {1}\tA két szám összege {2}! ({0}+{1}={2})", a, b, a + b);
+                                sor = String.Format("A = {0}\tB = {1}\tA két szám összege {2}! ({0}+{1}={2})", a, b, a+b);
                                 Console.WriteLine(sor);
                                 elozmeny.Add(sor);
                                 
@@ -130,5 +131,6 @@ namespace _01_Szamologep
 
            
         }
+    
     }
 }
