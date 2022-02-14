@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace _01_Szamologep
 {
@@ -10,6 +11,8 @@ namespace _01_Szamologep
             double a = 2;
             double b = 3;
             int menu = 0;
+            string sor;
+            List<string> elozmeny = new List<string>();
 
             do
             {
@@ -27,29 +30,100 @@ namespace _01_Szamologep
 
                 switch (menu)
                 {
-                    case 1:{
+                    
+                    case 1:
+                        {
                             if (a == 0 || b == 0)
                             {
-                                Console.WriteLine("Még nem adtál meg számokat!");
+                                Console.WriteLine("Valamelyik szám nulla!");
                                 Console.ReadLine();
                             }
                             else
                             {
-                                Console.WriteLine("A = {0}\tB = {1}\tA két szám összege {2}! ({0}+{1}={2})", a, b, a + b);
+                                sor = String.Format("A = {0}\tB = {1}\tA két szám összege {2}! ({0}+{1}={2})", a, b, a + b);
+                                Console.WriteLine(sor);
+                                elozmeny.Add(sor);
+                                
                                 Console.ReadLine();
                             }
                             break;
                         }
 
+                    case 2:
+                        {
+                            if (a == 0 || b == 0)
+                            {
+                                Console.WriteLine("Valamelyik szám nulla!");
+                                Console.ReadLine();
+                            }
+                            else
+                            {
+                                sor = String.Format("A = {0}\tB = {1}\tA két szám különbsége {2}! ({0}-{1}={2})", a, b, a - b);
+                                elozmeny.Add(sor);
+                                Console.WriteLine(sor);
+                                Console.ReadLine();
+                            }
+                            break;
+                        }
+
+                    case 3:
+                        {
+                            if (a == 0 || b == 0)
+                            {
+                                Console.WriteLine("Valamelyik szám nulla!");
+                                Console.ReadLine();
+                            }
+                            else
+                            {
+                                sor = String.Format("A = {0}\tB = {1}\tA két szám szorzata {2}! ({0}*{1}={2})", a, b, a * b);
+                                Console.WriteLine(sor);
+                                elozmeny.Add(sor);
+                                Console.ReadLine();
+                            }
+                            break;
+                        }
+
+                    case 4:
+                        {
+                            if (a == 0 || b == 0)
+                            {
+                                Console.WriteLine("Valamelyik szám nulla!");
+                                Console.ReadLine();
+                            }
+                            else
+                            {
+                                sor = String.Format("A = {0}\tB = {1}\tA két szám hányadosa {2}! ({0}/{1}={2})", a, b, a / b);
+                                Console.WriteLine(sor);
+                                elozmeny.Add(sor);
+                                Console.ReadLine();
+                            }
+                            break;
+                        }
+
+                    case 5:
+                        {
+                            Console.Write("\n\nKérem az A számot: ");
+                            a = double.Parse(Console.ReadLine());
+                            Console.Write("Kérem az B számot: ");
+                            b = double.Parse(Console.ReadLine());
+
+                            break;
+                        }
+                    case 6:
+                        {
+                            Console.Clear();
+                            foreach (var item in elozmeny)
+                            {
+                                Console.WriteLine(item);
+                            }
+                            Console.ReadLine();
+                            break;
+                        }
 
                     default:
                         Console.WriteLine("Hibás menüpont!");
                         break;
                 }
-
-
-
-
 
             } while (menu!=7);
 
