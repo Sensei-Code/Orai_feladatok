@@ -57,6 +57,32 @@ namespace Helsinki1952
             Console.WriteLine("Bronz: {0}", bronz);
             Console.WriteLine("Összesen: {0}", arany+ezust+bronz);
 
+            //5. Feladat
+            int[] pontok = new int[6] {7, 5, 4, 3, 2, 1};
+            int osszespont = 0;
+
+            foreach (var item in eredmenyek)
+            {
+                osszespont += pontok[item.helyezes - 1];
+            }
+
+            Console.WriteLine("5. Feladat:");
+            Console.WriteLine("Olimpiai pontok száma: {0}",osszespont);
+
+            //6. Feladat
+            int tornaermek = 0;
+            int uszasermek = 0;
+            foreach (var item in eredmenyek)
+            {
+                if (item.helyezes >= 3 && item.sportag == "úszás") uszasermek++;
+                else if (item.helyezes >= 3 && item.sportag == "torna") tornaermek++;
+            }
+
+
+
+            
+            Console.ReadLine();
+
         }
     }
 }
