@@ -80,11 +80,12 @@ namespace Helsinki1952
 
             if (uszasermek > tornaermek) 
                 Console.WriteLine("Úszás sportágban szereztek több érmet");
-            else if (tornaermek>uszasermek)
+            else if (tornaermek > uszasermek)
                 Console.WriteLine("Torna sportágban szereztek több érmet");
             else
                 Console.WriteLine("Egyenlő volt az érmek száma");
 
+            //7. feladat
 
 
 
