@@ -76,6 +76,65 @@ namespace Ultrabalaton
             else
                 Console.WriteLine("Nem");
 
+            //7. feladat
+            double osszes_ido = 0;
+            int db = 0;
+            foreach (var item in versenyzok)
+            {
+                if (item.kategoria == "Ferfi" && item.befejezes == 100)
+                {
+                    osszes_ido += IdoOraban(item.ido);
+                    db++;                        
+                }
+            }
+            Console.WriteLine(osszes_ido/db);
+
+            //8. feladat
+            Versenyzo ferfi_gyoztes = null;
+            Versenyzo noi_gyoztes = null; ;
+
+            //Megkeresi az első női és férfi versenyzőt
+            foreach (var item in versenyzok)
+            {
+                if (item.kategoria == "Ferfi" && item.befejezes == 100)
+                {
+                    ferfi_gyoztes = item;
+                    break;
+                }
+            }
+            foreach (var item in versenyzok)
+            {
+                if (item.kategoria == "Noi" && item.befejezes == 100)
+                {
+                    noi_gyoztes = item;
+                    break;
+                }
+            }
+            
+            //Elvégzi a vizsgálatot, hogy ki volt a leggyorsabb
+            foreach (var item in versenyzok)
+            {
+                if (item.kategoria == "Ferfi" && item.befejezes == 100 && IdoOraban(item.ido) < IdoOraban(ferfi_gyoztes.ido))
+                    ferfi_gyoztes = item;
+                if (item.kategoria == "Noi" && item.befejezes == 100 && IdoOraban(item.ido) < IdoOraban(noi_gyoztes.ido))
+                    noi_gyoztes = item;
+            }
+
+            Console.WriteLine("8. feladat: Verseny győztesei");
+            Console.WriteLine("\tNők: {0} ({1}.) - {2}",noi_gyoztes.nev,noi_gyoztes.rajtszam,noi_gyoztes.ido);
+            Console.WriteLine("\tFérfiak: {0} ({1}.) - {2}", ferfi_gyoztes.nev, ferfi_gyoztes.rajtszam, ferfi_gyoztes.ido);
+        }
+
+        //6. feladat
+        public static double IdoOraban(string ido)
+        {
+            string[] sor = ido.Split(':');
+
+            double ora = double.Parse(sor[0]);
+            double perc = double.Parse(sor[1]);
+            double mperc = double.Parse(sor[2]);
+
+            return ora+(perc/60)+(mperc/3600);
         }
     }
 }
