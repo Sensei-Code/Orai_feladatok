@@ -21,7 +21,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Adattipusok", "Adattipusok\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TEMP", "TEMP\TEMP.csproj", "{C78A38F4-58A7-49EB-8402-BF93435AF07A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helsinki1952", "Helsinki1952\Helsinki1952.csproj", "{918EDED8-18F7-4611-9D41-093F9AC3461F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Helsinki1952", "Helsinki1952\Helsinki1952.csproj", "{918EDED8-18F7-4611-9D41-093F9AC3461F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ultrabalaton", "Ultrabalaton\Ultrabalaton.csproj", "{26E9FE76-1CBC-4E61-92CF-D11BB02AB178}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{918EDED8-18F7-4611-9D41-093F9AC3461F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{918EDED8-18F7-4611-9D41-093F9AC3461F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{918EDED8-18F7-4611-9D41-093F9AC3461F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26E9FE76-1CBC-4E61-92CF-D11BB02AB178}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26E9FE76-1CBC-4E61-92CF-D11BB02AB178}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26E9FE76-1CBC-4E61-92CF-D11BB02AB178}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26E9FE76-1CBC-4E61-92CF-D11BB02AB178}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
